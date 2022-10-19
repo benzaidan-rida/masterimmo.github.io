@@ -1,0 +1,283 @@
+/*------------- Geeneral Css Setting --------------------*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    :root{
+        --main-color: hsl(37deg 22% 48%);
+        --gold-normal :#c2aa49;
+        --light-gold:hsl(58deg 100% 86%);
+        --dark-light-blue:hsl(220deg 23% 15%);
+        --dark:#242424;
+    }
+    *{
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+/*------------ Generl Css Component -----------------------*/
+    /*---------- navbar ------------------------------------*/
+    .custom-navbar ul.nav-link-contacts li span.icon{
+        width: 30px;
+        height: 30px;
+        border:2px solid var(--gold-normal);
+        display: flex;
+        transition: .2s all ease-in-out;
+        color:var(--gold-normal);
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem!important;
+        margin-right: 10px;
+    }
+    .custom-navbar ul.nav-link-contacts li a{
+        font-size: .7rem;
+        display: flex;
+        align-items: center;
+        color: var(--dark-light-blue);
+    }
+    .custom-navbar ul.nav-link-contacts li a:hover{
+        color: var(--gold-normal);
+    }
+    .custom-navbar ul.nav-link-contacts li a:hover span.icon{
+        background-color: var(--gold-normal);
+        color: white;
+    }
+    .custom-navbar .main-navbar{
+        background-color: #2e2e2e;
+    }
+    .custom-navbar .main-navbar .button-mobile{
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .custom-navbar .main-navbar .list-link .nav-link > a{
+        color: white;
+        font-size: .9rem;
+    }
+    .custom-navbar .main-navbar .list-link .nav-link.nav-link-btn a{
+        background-color: var(--gold-normal);
+        cursor: pointer;
+    }
+    .custom-navbar .main-navbar  .button-mobile{
+        display: none;
+    }
+    .custom-navbar .main-navbar .dropdown .dropdown-menu span.icon{
+        width: 30px;
+        height: 30px;
+        border:2px solid var(--gold-normal);
+        display: flex;
+        transition: .2s all ease-in-out;
+        color:var(--gold-normal);
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem!important;
+        margin-right: 10px;   
+    }
+    .custom-navbar .main-navbar .dropdown{
+        display: none!important;
+    }
+    .custom-navbar .main-navbar .dropdown button::after{
+        display: none;
+    }
+    .custom-navbar .main-navbar .list-link li.title{
+        display: none;
+    }
+    @media screen and (max-width: 992px) {
+        .custom-navbar .main-navbar .list-link{
+            position:fixed!important;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            top:0;
+            right: 0%;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark);
+            z-index: 3;
+            overflow: hidden;
+            padding-top: 3rem;
+            transition: .3s all ease-in-out;
+            
+        }
+        .custom-navbar .main-navbar .list-link.active{
+            left: 0%!important;
+        }
+        .custom-navbar .main-navbar .list-link li{
+            padding-left: 1.4rem;
+
+        }
+        .custom-navbar .main-navbar .list-link li.title{
+            display: flex;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .custom-navbar .main-navbar .list-link li h5::after{
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 30px;
+            height: 3px;
+            content: '';
+            background-color: var(--gold-normal);
+
+        }
+        .custom-navbar .main-navbar .list-link li a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            transition: .25s all ease-in-out;
+            margin-left: 1rem;
+        }
+        .custom-navbar .main-navbar .list-link li a:hover{
+            transform: translateX(5px);
+            color: var(--gold-normal);
+        }
+        .custom-navbar .main-navbar .list-link li a::before{
+            content: '';
+            background-color: var(--gold-normal);
+            width: 5px;
+            height: 3px;
+            display: block;
+            margin-right: 4px;
+        }
+        .custom-navbar ul.nav-link-contacts{
+            display: none!important;
+        }
+        .custom-navbar .main-navbar .dropdown{
+            display: block!important;
+        }
+        .custom-navbar .main-navbar  .button-mobile{
+            display: block!important;
+        }
+    }
+    /*----------- Footer -------------------------------------*/
+    .custom-footer .subscription-section{
+        background-color: #2e2e2e;
+    }
+    @media screen and (max-width: 992px) {
+        .custom-footer .subscription-section .container .col-md-6.d-flex{
+            display: block!important;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+      }
+    .custom-footer .subscription-section .icon{
+        font-size: 2rem;
+    }
+    .custom-footer .subscription-section .form-container input[type=email]{
+        outline: none;
+        border:none;
+        width:calc(100% - 80px);
+    }
+    .custom-footer .subscription-section .form-container button{
+        background-color:#c2aa49;
+        border:none;
+        left:-30px;
+    }
+    .custom-footer .main-footer{
+        background-color:#242424;
+    }
+    .custom-footer .link-list-title::before{
+        content: '';
+        width: 10px;
+        height:10px;
+        background-color:#c2aa49;
+        position: relative;
+        margin-right:9px;
+        transform: rotate(45deg);
+        display: block;
+    }
+    .custom-footer .link-list-title::after{
+        content: '';
+        background-color: #c2aa49;
+        width: 20px;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 19px;
+    }
+    .custom-footer .main-footer ul.link-list{
+        font-size: 12px;
+    }
+    .custom-footer .main-footer ul.link-list li a{
+        display: flex;
+        align-items: center;
+    }
+    .custom-footer .main-footer ul.link-list li a::before{
+        content: '';
+        position: static;
+        width: 5px;
+        height: 2px;
+        background-color: #c2aa49;
+        display: block;
+        margin-right: 5px;
+    }
+    .custom-footer ul li a{
+        color:white;
+        transition: all ease-in-out .25s;
+    }
+    .custom-footer ul li a:hover{
+        color: var(--gold-normal)!important;
+    }
+    .custom-footer .main-footer .container .list-unstyled .social-links ul li a{
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+    }
+    .custom-footer .main-footer .container .list-unstyled .social-links ul li a:hover{
+        background-color: var(--gold-normal)!important;
+        color: white!important;
+    }
+/*-------------- Index CSS Style --------------------------------*/
+    /*------- Categorie List CSS---------------------------------*/
+    @media (min-width: 992px){
+        .box-category {
+            padding: 68px 35px 40px 79px!important;
+        }
+    }
+    @media (min-width: 768px){
+        .box-category {
+            min-height: 307px;
+            padding: 25px 25px 25px 80px;
+            padding-top: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            padding-left: 80px;
+        }
+    }
+    .box-category {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: 200px;
+        align-items: flex-end;
+        padding: 50px 25px 25px 80px;
+        box-sizing: border-box;
+        width: 100%!important;
+        overflow: hidden;
+    }
+    .list-categorie .box-category-outer .box-category::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        background-color: #2e2e2e6b;
+        z-index: 1;
+    }
+    .list-categorie .box-category-outer .box-category-image-outer{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+

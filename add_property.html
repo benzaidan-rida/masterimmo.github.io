@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*------------ CREATE PROPERTY SECTION -------------------------*/
+        .gallery-container > li > div{
+            position:relative;
+            overflow:hidden;
+            width:100%;
+            border-radius:10px;
+            background-color:black;
+            padding-top:100%;
+            margin:12px 0;
+        }
+        .gallery-container > li > div > img{
+            position:absolute;
+            display:block;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            top:0;
+            right:0;
+        }
+        .gallery-container > li > div >div{
+            position:absolute;
+            width:100%;
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            top:0;
+            right:0;
+        }
+        .gallery-container > li > div >div > button{
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!------navbar------------------->
+    <nav class="custom-navbar" >
+        <ul class="list-unstyled mb-0 w-100 bg-white d-flex py-1 justify-content-between container nav-link-contacts" aria-labelledby="dropdownMenuButton1">
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-facebook"></i></span> facebook</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-instagram"></i></span> Youtube</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-youtube"></i></span> Instagrame</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-solid fa-phone"></i></span> +212 63428 00-94</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-solid fa-envelope"></i></span> contact@masterimmomarrakech.com</a></li>
+        </ul>
+        <div class="main-navbar w-100" style="top:0px;left:0;z-index: 2;">
+            <div class="container d-flex py-2 justify-content-between">
+                <!-- <div class="logo-mobile-btn d-flex align-items-center text-white"> -->
+                    <button class="button-mobile text-white bg-secondary px-3 py-1"><span><i class="fa-solid fa-bars"></i></span></button>
+                    <div class="logo text-white">
+                        <!-- <img src="" alt="" srcset=""> -->
+                        logo
+                    </div>
+                    
+                <ul class="list-unstyled d-flex list-link mb-0">
+                    <li class="nav-link text-white title  align-items-center justify-content-between">
+                        <h5 class="position-relative">List links</h5>
+                        <button class="border-0 text-white close-btn" style="background: none;"><span style="font-size: 1.5rem;"><i class="fa-solid fa-x"></i></span></button>
+                    </li>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="property.html">Vente</a></li>
+                    <li class="nav-link"><a href="property.html">Location</a></li>
+                    <li class="nav-link"><a href="about_us.html">A PROPOS</a></li>
+                    <li class="nav-link"><a href="contact_us.html"> CONTACT</a></li>
+                    <li class="nav-link nav-link-btn"><a href="add_property.html" class="px-4 py-2 rounded"> Add Your Property</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </button>
+                    <ul class="dropdown-menu social-links p-2" aria-labelledby="dropdownMenuButton1">
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-facebook"></i></span> facebook</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-instagram"></i></span> Youtube</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-youtube"></i></span> Instagrame</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-solid fa-phone"></i></span> +212 63428 00-94</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-solid fa-envelope"></i></span> contact@masterimmomarrakech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="property-add">
+        <div class="container">
+            <form  class="row"  method="post" action="./property_new.php">
+                <div class="col-md-6 my-2">
+                    <div class="email-form py-2 px-1 ">
+                        <div class="logo-conatiner d-flex align-items-center">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center shadow me-1 d-flex" style="width: 50px; height: 50px;background-color: #f1faff;color: #009ef7;">
+                                <span class="d-block">
+                                    <i class="fa-solid fa-heading"></i>
+                                </span>
+                            </div>
+                            <h6 class="fw-bold my-0">title and description</h6>
+                        </div>
+                        <div class="input-container my-1" >
+                            <label style="font-size:13px;color:#455892;" class="d-block text-right">title  <span class="text-danger">*</span></label>
+                            <input class="form-control bg-light" name="title" type="text" placeholder="title"  id="title"  />
+                            <span  class="text-danger" style="font-size:13px"></span>
+                        </div>
+                        <div class="input-container my-1" >
+                            <label class="w-100 d-block" style="font-size:13px;color:#455892 ;">description  <span class="text-danger">*</span></label>
+                            <textarea name="description" class="form-control bg-light" rows="10" name="description" id="description"  ></textarea>
+                            <span class="text-danger" style="font-size:13px"></san>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="gallery">
+                        <div class="logo-conatiner d-flex align-items-center">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center shadow me-1 d-flex" style="width: 50px; height: 50px;background-color: #f8f5ff;color: #7239ea;">
+                                <span class="d-block">
+                                    <i class="fa-solid fa-images"></i>
+                                </span>
+                            </div>
+                            <h6 class="fw-bold my-0">Gallery</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="gallery-property rounded py-2 px-1 mx-1" style="border: dotted 2px #ffc700;">
+                                <ul class="row list-unstyled image-inner gallery-container">
+                                    <!------- list de image ------------------------->
+                                </ul>
+                                <input type="file"  class="d-none" name="gallery" id="gallery"  multiple>
+                                <div class="button pt-3 pb-1" >
+                                    <label for="gallery" class="rounded-pill ms-auto btn btn-primary" style="font-size: 16px!important;">
+                                        <span class="mx-1"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                        <span class="text mx-1">upload</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 my-2">
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <div class="logo-conatiner d-flex align-items-center">
+                                <div class="rounded-circle d-flex justify-content-center align-items-center shadow me-1 d-flex" style="width: 50px; height: 50px;background-color: #fff8dd;color: #ffc700;">
+                                    <span class="d-block">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </span>
+                                </div>
+                                <h6 class="fw-bold my-0">local de propertie</h6>
+                            </div>
+
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="city" >ville <span class="text-danger">*</span></label>
+                                <input type="text" name="city" id="city" class="form-control bg-light" >
+                                <span class="text-danger" style="font-size:13px"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="quartier" >Quartier <span class="text-danger">*</span></label>
+                                <input name="quartier" type="text" placeholder="quatier" class="form-control bg-light" name="quartier" id="quartier"  />
+                                <span class="text-danger" style="font-size:13px"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="method" >type de Biene <span class="text-danger">*</span></label>
+                                <select class="form-select" name="type_id" id="type_id">
+                                    <option value="" selected>choisir un positon</option>
+                                        <option value="">name</option>
+                                </select>
+                                <span class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="logo-conatiner d-flex align-items-center">
+                                <div class="rounded-circle d-flex justify-content-center align-items-center shadow me-1 d-flex" style="width: 50px; height: 50px;background-color: #e8fff3;color: #72cd89;">
+                                    <span class="d-block">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                </div>
+                                <h6 class="fw-bold my-0">local de propertie</h6>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="superficie">Superficie <span class="text-danger">*</span></label>
+                                <input name="superficie" type="text" placeholder="superficie" class="form-control bg-light"  id="superficie">
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="method_id">Type de transaction  <span class="text-danger">*</span></label>  
+                                <select class="form-select" name="method_id" id="method_id">
+                                    <option value="" selected>choisir une type de transaction</option>
+                                    <option value="">name</option>
+                                </select>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="price">Prix en MAD <span class="text-danger">*</span></label>
+                                <input  type="number" placeholder="price" class="form-control bg-light" name="price" id="price" />
+                                <span class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="logo-conatiner d-flex align-items-center">
+                                <div class="rounded-circle d-flex justify-content-center align-items-center shadow me-1 d-flex" style="width: 50px; height: 50px;background-color: #fff5f8;color: #f2586c;">
+                                    <span class="d-block">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                </div>
+                                <h6 class="fw-bold my-0">local de propertie</h6>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="phone">phone <span class="text-danger">*</span></label>
+                                <input type="text" placeholder="06XXXXXX" class="form-control" name="phone" id="phone" />
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892 ;" for="email" >email <span class="text-danger">*</span></label>
+                                <input type="email" placeholder="email@gmail.com" class="form-control bg-light" name="email" id="email"/>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="input-container my-1" >
+                                <label style="font-size:13px;color:#455892;" for="adress" >adress <span class="text-danger">*</span></label>
+                                <input type="text" placeholder="adress" class="form-control bg-light" name="adress"  id="adress" />
+                                <span class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 my-2">
+                    <div class="button">
+                        <button type="submit" class="btn submit-btn btn-primary rounded-pill px-3" shadow>
+                            send
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-----footer-------------------->
+    <footer class="custom-footer mt-2">
+        <div class="subscription-section py-1">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col-md-6 d-flex text-white">
+                        <span class="me-2 text-muted icon"><i class="fa-regular fa-envelope"></i></span>
+                        <div class="inline-block">
+                            <h5 class="mb-0">Subscribe To Newsletter</h5>
+                            <p class="mb-0" style="font-size: 12px;">Lorem Ipsum Is Simply Dummy The Printing For Available</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-container d-flex">
+                            <input  type="email" class="rounded-pill py-2 ps-4 pe-5 d-block"  placeholder="email adress" name="" id="">
+                            <button class="text-white rounded-pill shadow px-2 position-relative">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer py-2 text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 py-3 my-1">
+                        <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Quick Information</h5>
+                        <ul class="list-unstyled mt-3" style="font-size: 12px;">
+                            <li class="mb-2">60, 29th Street, San Francisco, CA 94110, United States Of America</li>
+                            <li class="mb-2">(+00) 123-456-789</li>
+                            <li class="mb-3"><a href=""> Support@Company.Com</a></li>
+                            <li class="social-links">                        
+                                <ul class="list-unstyled d-flex">
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-google"></i></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-5 py-3">
+                        <div class="row">
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Categorie</h5>
+                                <ul class="list-unstyled link-list ms-3">
+                                    <li class="mb-1"><a class="text-white" href="">Villa</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Apppatement</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Ferme</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Type de Bien</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Villa</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Apppatement</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Ferme</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Ville</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Marrakech</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Tanger</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Agadir</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Pages</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Search</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">About us</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">A propos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 py-3">
+                        <h5 class="link-list-title mb-3 position-relative pb-2 d-flex align-items-center ">Our Latest Property</h5>
+                        <ul class="list-property list-unstyled">
+                            <li class="d-flex">
+                                <div class="image-container position-relative" style="width: 45px;height:45px;">
+                                    <img src="image/home-1.jpg" class="position-absolute w-100 h-100" style="top:0;right:0;object-fit:cover" alt="">
+                                </div>
+                                <div class="property-body ms-2 d-flex flex-column align-items-">
+                                    <h6 class="fw-bold mt-1" style="color:#c2aa49;font-size:.8rem">Property Marrakech Best city</h6>
+                                    <p class="text-white" style="font-size:.7rem">2 room, 3 sallon, 1 garage</p>
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <div class="image-container position-relative" style="width: 45px;height:45px;">
+                                    <img src="image/home-1.jpg" class="position-absolute w-100 h-100" style="top:0;right:0;object-fit:cover" alt="">
+                                </div>
+                                <div class="property-body ms-2 d-flex flex-column align-items-">
+                                    <h6 class="fw-bold mt-1" style="color:#c2aa49;font-size:.8rem">Property Marrakech Best city</h6>
+                                    <p class="text-white" style="font-size:.7rem">2 room, 3 sallon, 1 garage</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-footer py-3 " style="border-top:rgb(58 58 58) 1px solid;background-color:#242424; font-size:.7rem ;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="copyright text-white">Copyright © 2022 By Thementic .All Rights Reserved.</div>
+                <div class="logo"><img src="" alt="" srcset=""></div>
+            </div>
+        </div>
+    </footer>
+    <!------scripts-------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $(document).on('scroll',function(){
+                if(window.scrollY > 40){
+                    $("nav.custom-navbar .main-navbar").addClass("position-fixed");
+                }else if(window.scrollY <= 40){
+                    $("nav.custom-navbar .main-navbar").removeClass("position-fixed");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

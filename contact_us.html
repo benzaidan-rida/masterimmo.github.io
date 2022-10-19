@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <style>
+        /*------- header design --------------------------------*/
+        .title-icon span{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+        }
+        .title-icon span::after{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            top: 15%;
+            left: 15%;
+            position: absolute;
+            content: '';
+            border: 1px solid black;
+        }
+
+
+
+        * {
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+
+    .wrapper {
+        display: grid;
+        grid-template-areas: 'overlap';
+        place-content: center;
+        text-transform: uppercase;
+    }
+    .wrapper > div {
+    background-clip: text;  
+    -webkit-background-clip: text;
+    color: #363833;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: clamp( 3em, 10vw, 5rem);
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
+    }
+    div.bg {
+    background-image: repeating-linear-gradient( 105deg, 
+        var(--gold) 0% , 
+        var(--dark-shadow) 5%,
+        var(--gold) 12%);
+    color: transparent;
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
+    }
+    div.fg{
+    background-image: repeating-linear-gradient( 5deg,  
+        var(--gold) 0% , 
+        var(--light-shadow) 23%, 
+        var(--gold) 31%);
+    color: #1e2127;
+    transform: scale(1);
+    }
+    </style>
+</head>
+<body>
+    <!------navbar------------------->
+    <nav class="custom-navbar" >
+        <ul class="list-unstyled mb-0 w-100 bg-white d-flex py-1 justify-content-between container nav-link-contacts" aria-labelledby="dropdownMenuButton1">
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-facebook"></i></span> facebook</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-instagram"></i></span> Youtube</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-brands fa-youtube"></i></span> Instagrame</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-solid fa-phone"></i></span> +212 63428 00-94</a></li>
+            <li><a href=""><span class="icon rounded-circle"><i class="fa-solid fa-envelope"></i></span> contact@masterimmomarrakech.com</a></li>
+        </ul>
+        <div class="main-navbar w-100" style="top:0px;left:0;z-index: 2;">
+            <div class="container d-flex py-2 justify-content-between">
+                <!-- <div class="logo-mobile-btn d-flex align-items-center text-white"> -->
+                    <button class="button-mobile text-white bg-secondary px-3 py-1"><span><i class="fa-solid fa-bars"></i></span></button>
+                    <div class="logo text-white">
+                        <!-- <img src="" alt="" srcset=""> -->
+                        logo
+                    </div>
+                    
+                <ul class="list-unstyled d-flex list-link mb-0">
+                    <li class="nav-link text-white title  align-items-center justify-content-between">
+                        <h5 class="position-relative">List links</h5>
+                        <button class="border-0 text-white close-btn" style="background: none;"><span style="font-size: 1.5rem;"><i class="fa-solid fa-x"></i></span></button>
+                    </li>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="property.html">Vente</a></li>
+                    <li class="nav-link"><a href="property.html">Location</a></li>
+                    <li class="nav-link"><a href="about_us.html">A PROPOS</a></li>
+                    <li class="nav-link"><a href="contact_us.html"> CONTACT</a></li>
+                    <li class="nav-link nav-link-btn"><a href="add_property.html" class="px-4 py-2 rounded"> Add Your Property</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </button>
+                    <ul class="dropdown-menu social-links p-2" aria-labelledby="dropdownMenuButton1">
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-facebook"></i></span> facebook</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-instagram"></i></span> Youtube</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-brands fa-youtube"></i></span> Instagrame</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-solid fa-phone"></i></span> +212 63428 00-94</a></li>
+                        <li class="py-1"><a href="" class="d-flex text-dark"><span class="icon rounded-circle"><i class="fa-solid fa-envelope"></i></span> contact@masterimmomarrakech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="contact-us-section">
+        <!------header section -------->
+        <header class="header-section py-5" style="background-color:#212121;">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="bg"> contact </div>
+                    <div class="fg"> contact </div>
+                </div>
+            </div>
+        </header>
+        <!-----------Contact us main -------------------->
+        <div class="contact-us-main" style="background-image:url('image/contactusbg.png');backgound-size:cover;background-repeat: no-repeat;" >
+            <section class="contact-us-section position-relative py-3" >
+                <div class="container">
+                <div class="h4 fw-bold text-center">We need to be always  <br> more closer to each other</div>
+                    <h2 class="fw-bold text-center title-icon h5" style="color:#6f42c1 ;"> <span class="icon-h2 d-inline-block position-relative" style="background-color:#6f42c1 ;"></span> Contact <span class="icon-h2 d-inline-block position-relative" style="background-color:#6f42c1 ;"></span> </h2>
+                    
+                    <div class="row">
+                        <div class="col-md-8 col-12 col-lg-8">
+                            <div class="rounded p-3 shadow" style="background-color: #1e2127;">
+                                <div class="inner-form p-2" style="border:1px solid #c2aa49;">
+                                    <h3 class="text-center h4 fw-bold">Get In Touch</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 col-lg-6">
+                                            <div class="form-container mb-2">
+                                                <label class="text-white" style="font" for="">email</label>
+                                                <input type="text" class="w-100 px-2 py-1" style="border:1px solid #c2aa49;outline: none;" placeholder="email" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12 col-lg-6">
+                                            <div class="form-container mb-3">
+                                                <label class="text-white" for="">subject</label>
+                                                <input type="text" class="w-100 px-2 py-1" style="border:1px solid #c2aa49;outline: none;" placeholder="subject"  type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-container mb-3 w-100">
+                                                <label class="text-white" for="">subject</label>
+                                                <textarea class="w-100 px-2 py-1"  placeholder="your message" name="" id="" cols="30" rows="10"></textarea>
+                                            </div>
+                                            <button class="d-block w-100 btn-sm border-0" style="background-color: #c2aa49;">
+                                                send
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 col-lg-4">
+                            <div class="d-flex h-100 w-100 align-items-center flex-column">
+                                <div class="email-card align-items-center rounded w-100 p-3 d-flex mb-2 rounded shadow" style="background-color: #1e2127;">
+                                    <span class="position-relative text-dark d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background-color: #c2aa49;">
+                                        <span style="font-size:1rem;"><i class="fa-solid fa-location-dot"></i></span>
+                                    </span>
+                                    <h5 class="ms-2 mb-0 h6 fw-bold text-white" style="font-size:15px">Massira, marrakech</h5>
+                                </div> 
+                                <div class="email-card align-items-center rounded w-100 p-3 d-flex mb-2 shadow" style="background-color: #1e2127;">
+                                    <span class="position-relative text-dark d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background-color: #c2aa49;">
+                                    <span style="font-size:1rem;"><i class="fa-solid fa-envelope"></i></span>
+                                    </span>
+                                    <h5 class="ms-2 h6 fw-bold text-white" style="font-size:14px">contact@masterimmomarrakech.com</h5>
+                                </div>
+                                <div class="email-card align-items-center rounded w-100 p-3 d-flex mb-2 shadow" style="background-color: #1e2127;" >
+                                    <span class="position-relative d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background-color: #c2aa49;">
+                                    <span  style="font-size:1rem;"><i class="fa-solid fa-phone"></i></span>
+                                    </span>
+                                    <h5 class=" mb-0 text-white ms-2 h6 fw-bold"style="font-size:14px">+212 7 01 13 70 01 </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="maps-container w-100 py-2">
+                                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.9870244607155!2d-8.062631549804324!3d31.634205648586782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafe9b1cc93e5ad%3A0x6c4ce89e052cd31a!2sBusiness%20center%20confidence!5e0!3m2!1sen!2sma!4v1663951957255!5m2!1sen!2sma" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-----footer-------------------->
+    <footer class="custom-footer mt-2">
+        <div class="subscription-section py-1">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col-md-6 d-flex text-white">
+                        <span class="me-2 text-muted icon"><i class="fa-regular fa-envelope"></i></span>
+                        <div class="inline-block">
+                            <h5 class="mb-0">Subscribe To Newsletter</h5>
+                            <p class="mb-0" style="font-size: 12px;">Lorem Ipsum Is Simply Dummy The Printing For Available</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-container d-flex">
+                            <input  type="email" class="rounded-pill py-2 ps-4 pe-5 d-block"  placeholder="email adress" name="" id="">
+                            <button class="text-white rounded-pill shadow px-2 position-relative">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer py-2 text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 py-3 my-1">
+                        <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Quick Information</h5>
+                        <ul class="list-unstyled mt-3" style="font-size: 12px;">
+                            <li class="mb-2">60, 29th Street, San Francisco, CA 94110, United States Of America</li>
+                            <li class="mb-2">(+00) 123-456-789</li>
+                            <li class="mb-3"><a href=""> Support@Company.Com</a></li>
+                            <li class="social-links">                        
+                                <ul class="list-unstyled d-flex">
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a class="rounded-circle text-white d-block me-1" style="width:35px;height:35px;background-color: #363636;" href=""><i class="fa-brands fa-google"></i></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-5 py-3">
+                        <div class="row">
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Categorie</h5>
+                                <ul class="list-unstyled link-list ms-3">
+                                    <li class="mb-1"><a class="text-white" href="">Villa</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Apppatement</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Ferme</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Type de Bien</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Villa</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Apppatement</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Ferme</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Ville</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Marrakech</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Tanger</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">Agadir</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 my-1">
+                                <h5 class="link-list-title position-relative pb-2 d-flex align-items-center">Pages</h5>
+                                <ul class="list-unstyled link-list ms-3" >
+                                    <li class="mb-1"><a class="text-white" href="">Search</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">About us</a></li>
+                                    <li class="mb-1"><a class="text-white" href="">A propos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 py-3">
+                        <h5 class="link-list-title mb-3 position-relative pb-2 d-flex align-items-center ">Our Latest Property</h5>
+                        <ul class="list-property list-unstyled">
+                            <li class="d-flex">
+                                <div class="image-container position-relative" style="width: 45px;height:45px;">
+                                    <img src="image/home-1.jpg" class="position-absolute w-100 h-100" style="top:0;right:0;object-fit:cover" alt="">
+                                </div>
+                                <div class="property-body ms-2 d-flex flex-column align-items-">
+                                    <h6 class="fw-bold mt-1" style="color:#c2aa49;font-size:.8rem">Property Marrakech Best city</h6>
+                                    <p class="text-white" style="font-size:.7rem">2 room, 3 sallon, 1 garage</p>
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <div class="image-container position-relative" style="width: 45px;height:45px;">
+                                    <img src="image/home-1.jpg" class="position-absolute w-100 h-100" style="top:0;right:0;object-fit:cover" alt="">
+                                </div>
+                                <div class="property-body ms-2 d-flex flex-column align-items-">
+                                    <h6 class="fw-bold mt-1" style="color:#c2aa49;font-size:.8rem">Property Marrakech Best city</h6>
+                                    <p class="text-white" style="font-size:.7rem">2 room, 3 sallon, 1 garage</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-footer py-3 " style="border-top:rgb(58 58 58) 1px solid;background-color:#242424; font-size:.7rem ;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="copyright text-white">Copyright © 2022 By Thementic .All Rights Reserved.</div>
+                <div class="logo"><img src="" alt="" srcset=""></div>
+            </div>
+        </div>
+    </footer>
+    <!--------Scripts ------------------>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $(document).on('scroll',function(){
+                if(window.scrollY > 40){
+                    $("nav.custom-navbar .main-navbar").addClass("position-fixed");
+                }else if(window.scrollY <= 40){
+                    $("nav.custom-navbar .main-navbar").removeClass("position-fixed");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
